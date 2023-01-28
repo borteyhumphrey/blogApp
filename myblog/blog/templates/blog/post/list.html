@@ -3,15 +3,18 @@
 
 {% block content %}
     {% for post in posts %}
-        <h2>
-            <a href="{{ post.get_absolute_url }}">
-                {{ post.title }}
-            </a>
-        </h2>
-        <p>
-            Published {{ post.publish }} by {{ post.author }}
-        </p>
-        {{ post.body|truncatewords:30|linebreaks }}
+        <div class="post-preview">
+            <h2  class="post-title">
+                <a href="{{ post.get_absolute_url }}">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <p class="post-meta">
+                Published {{ post.publish }} by {{ post.author }}
+            </p>
+            {{ post.body|truncatewords:30|linebreaks }}
+        </div>
     {% endfor %}
+    <hr class="my-4" />
     {% include "pagination.html" with page=page_obj %}
 {% endblock %}
