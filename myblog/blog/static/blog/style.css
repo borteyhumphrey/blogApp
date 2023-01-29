@@ -101,6 +101,7 @@ hr:not([size]) {
   height: 1px;
 }
 
+
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -11122,9 +11123,10 @@ header.masthead {
   margin-bottom: 3rem;
   padding-top: calc(8rem + 57px);
   padding-bottom: 8rem;
-  background: no-repeat center center;
+  background: no-repeat center;
   background-color: #6c757d;
   background-size: cover;
+  background-image: url('images/homeBackground.jpg');
   background-attachment: scroll;
 }
 header.masthead:before {
